@@ -14,12 +14,12 @@ public class CountFiles {
 
     static int java = 0;
 
-    public static void CountFiles() {
+    static void CountFiles() {
 
-        for (File file : files) {
-            if (file.getName().endsWith(".java")) {
+        for (File fileName : files) {
+            if (fileName.getName().endsWith(".java")) {
                 java++;
-                javafile.add(file.getAbsolutePath());
+                javafile.add(fileName.getAbsolutePath());
             }
         }
         System.out.println("Number of Java files: " + java);
