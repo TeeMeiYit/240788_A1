@@ -6,7 +6,7 @@
 //Name: #Tee Mei Yit
 package com.uum.asg1;
 
-import static com.uum.asg1.Calculate.directoryPath;
+import static com.uum.asg1.Calculate.absoluteFilePath;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -22,8 +22,8 @@ public class CountIssue {
     static void CountIssue() throws FileNotFoundException, IOException {
 
         for (int i = 0; i < javafile.size(); i++) {
-            directoryPath = javafile.get(i).toString();
-            BufferedReader br = new BufferedReader(new FileReader(directoryPath));
+            absoluteFilePath = javafile.get(i).toString();
+            BufferedReader br = new BufferedReader(new FileReader(absoluteFilePath));
             while ((readLine = br.readLine()) != null) {
                 if (readLine.contains("public static void main")) {
                     issue++;

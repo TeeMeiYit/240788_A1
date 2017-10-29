@@ -13,14 +13,16 @@ import java.io.IOException;
 
 public class Calculate {
 
-    static String directoryPath = "C:\\Users\\Mei Yit\\Documents\\NetBeansProjects\\240788_A1\\test";
-    static File directory = new File(directoryPath);
+    static String filename = "test";
+    static String workingDirectory = System.getProperty("user.dir");
+    static String absoluteFilePath = workingDirectory + File.separator + filename;
+    static File directory = new File(absoluteFilePath);
     static File[] files = directory.listFiles();
 
     public static void main(String[] args) throws IOException {
+
         CountFiles();
         CountIssue();
 
     }
-
 }
